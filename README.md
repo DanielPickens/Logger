@@ -26,5 +26,5 @@ $ YOUR_APP_LOG=trace go run _example/main.go
 ```
 
 ## License
-
+MIT
 
