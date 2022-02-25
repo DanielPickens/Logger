@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"Logger/clilog"
+	logger "github.com/DanielPickens/logger"
 )
 
 func main() {
