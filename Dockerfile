@@ -1,33 +1,19 @@
-FROM FROM golang:1.7.1
+FROM golang:latest
 
-ARG CI
+# Add Maintainer Info
+LABEL maintainer="Daniel Pickens <daniel@gmail.com>"
 
+# Set the Current Working Directory inside the container
+WORKDIR /app
 
-ADD . /build/docker-logger
-WORKDIR /build/docker-logger
+# Copy everything from the current directory to the Working Directory inside the container
+COPY . .
 
-RUN cd app && go test -v -mod=vendor -covermode=count -coverprofile=/profile.cov ./...
+# Build the Go app
+RUN go build -o main .
 
-RUN golangci-lint run --out-format=tab --tests=false ./...
+# Expose port 8080 to the outside world
+EXPOSE 8080
 
-RUN \
-    revison=$(/script/git-rev.sh) && \
-    echo "revision=${revison}" && \
-    go build -mod=vendor -o docker-logger -ldflags "-X main.revision=$revison -s -w" ./app
-
-# submit coverage to coverals if COVERALLS_TOKEN in env
-RUN if [ -z "$COVERALLS_TOKEN" ] ; then echo "coverall not enabled" ; \
-    else goveralls -coverprofile=/profile.cov -service=travis-ci -repotoken $COVERALLS_TOKEN || echo "coverall failed!"; fi
-
-
-FROM alpine:3.9
-
-RUN apk add --update --no-cache tzdata
-
-COPY --from=build /build/docker-logger /srv/
-
-
-WORKDIR /srv
-
-VOLUME ["/srv/logs"]
-CMD ["/srv/docker-logger"]
+# Command to run the executable
+CMD ["./main"]
