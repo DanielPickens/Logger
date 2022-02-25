@@ -30,7 +30,7 @@ There are many loggers and many ways to record logs. They can be written to a fi
 If you have logger you want to use you can write one that conforms to the Logger interface found in log.go. That logger can then be configured as documented in the previous section.
 
 
-Log Levels
+## Log Levels
 The following log levels are currently active in log tracing defaults across the interface.
 
 - Error
