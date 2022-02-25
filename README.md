@@ -17,7 +17,7 @@ $ go get github.com/Logger
 clilog.Env = "YOUR_APP_LOG"
 clilog.SetOutput()
 
-log.Printf("[INFO] run main function")
+log.Printf("[INFO] your running sys logs")
 ```
 
 ```console
