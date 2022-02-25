@@ -1,4 +1,4 @@
-module 
+module github.com/DanielPickens/Logger
 
 go 1.17
 
