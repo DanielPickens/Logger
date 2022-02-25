@@ -33,11 +33,11 @@ If you have logger you want to use you can write one that conforms to the Logger
 Log Levels
 The following log levels are currently active in log tracing defaults across the interface.
 
-Error
-Warn
-Info
-Debug
-Trace
+- Error
+- Warn
+- Info
+- Debug
+- Trace
 
 ## License
 MIT
