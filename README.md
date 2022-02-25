@@ -48,4 +48,4 @@ MIT
 ## Todo
 
  - Needs to write messages that in some situations are sent to console output and in other situations are sent to logs. 
- - Needs to have the logs eventually imported as a library into the system.
+ 
