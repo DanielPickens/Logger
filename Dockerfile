@@ -1,19 +1,19 @@
-FROM golang:latest
-
-# Add Maintainer Info
-LABEL maintainer="Daniel Pickens <daniel@gmail.com>"
+FROM golang:1.17
 
 # Set the Current Working Directory inside the container
-WORKDIR /app
+WORKDIR $GOPATH/src/github.com/DanielPickens/Logger
 
-# Copy everything from the current directory to the Working Directory inside the container
+# Copy everything from the current directory to the PWD (Present Working Directory) inside the container
 COPY . .
 
-# Build the Go app
-RUN go build 
+# Download all the dependencies
+RUN go get -d -v ./...
 
-# Expose port 8080 to the outside world
+# Install the package
+RUN go install -v ./...
+
+# This container exposes port 8080 to the outside world
 EXPOSE 8080
 
-# Command to run the executable
-CMD ["./main"]
+# Run the executable
+CMD ["logger"]
