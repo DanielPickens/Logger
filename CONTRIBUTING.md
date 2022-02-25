@@ -3,13 +3,6 @@
 I'd love to accept your patches and contributions to this project. There are
 just a few small guidelines you need to follow.
 
-## Contributor License Agreement
-
-Contributions to this project must be accompanied by a Contributor License
-Agreement. You retain the copyright to your contribution;
-this simply gives me permission to use and redistribute your contributions as
-part of the project. 
-
 
 ## Code reviews
 
