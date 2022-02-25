@@ -17,12 +17,12 @@ $ go get github.com/Logger
 clilog.Env = "YOUR_APP_LOG"
 clilog.SetOutput()
 
-log.Printf("[INFO] your running sys logs")
+log.Printf("[INFO] your running logs")
 ```
 
 ```console
 $ YOUR_APP_LOG=trace go run _example/main.go
-2020/01/24 20:49:35 [INFO] run main function
+2020/01/24 20:49:35 [INFO] your running logs
 ```
 
 
