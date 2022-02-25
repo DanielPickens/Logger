@@ -1,20 +1,20 @@
-FROM golang:1.17
+FROM golang:1.17 AS builder
 
-# Set the Current Working Directory inside the container
-WORKDIR $GOPATH/src/github.com/DanielPickens/Logger
+COPY ${PWD} /app
+WORKDIR /app
 
-# Copy everything from the current directory to the PWD (Present Working Directory) inside the container
-COPY . .
 
-# Download all the dependencies
+RUN CGO_ENABLED=0 go build -ldflags '-s -w -extldflags "-static"' -o /app/appbin *.go
 
-RUN go get 
-RUN go mod tidy 
-# Install the package
-RUN go install -v ./...
 
-# This container exposes port 8080 to the outside world
-EXPOSE 8080
+FROM scratch
+LABEL MAINTAINER Daniel Pickens <daniel@gmail.com>
 
-# Run the executable
-CMD ["logger"]
+COPY --from=builder /app /app
+
+WORKDIR /app
+
+EXPOSE 8000
+EXPOSE 8443
+
+CMD ["./appbin"]
