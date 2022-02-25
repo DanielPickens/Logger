@@ -1,4 +1,4 @@
-package clilog
+package logger
 
 import (
 	"bytes"
