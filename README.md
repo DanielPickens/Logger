@@ -2,7 +2,7 @@ Logger
 ==========
 [![Go Report Card](https://goreportcard.com/badge/github.com/DanielPickens/Logger)](https://goreportcard.com/report/github.com/DanielPickens/Logger)
 [![](https://github.com/DanielPickens/semver/workflows/Tests/badge.svg)](https://github.com/DanielPickens/Logger/actions)
-[![GoDoc](https://img.shields.io/static/v1?label=godoc&message=reference&color=blue)](https://pkg.go.dev/github.com/DanielPickens/Logger
+[![GoDoc](https://img.shields.io/static/v1?label=godoc&message=reference&color=blue)](https://pkg.go.dev/github.com/DanielPickens/Logger)
 
 
 This program is a high performing Go logging system as a CLI tool.
