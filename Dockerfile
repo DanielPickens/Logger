@@ -7,6 +7,7 @@ WORKDIR $GOPATH/src/github.com/DanielPickens/Logger
 COPY . .
 
 # Download all the dependencies
+RUN go mod tidy 
 RUN go get -d -v ./...
 
 # Install the package
