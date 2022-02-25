@@ -1,4 +1,4 @@
-FROM danielpickens/baseimage:buildgo-latest as build
+FROM FROM golang:1.7.1
 
 ARG CI
 
