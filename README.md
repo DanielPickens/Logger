@@ -4,8 +4,7 @@ Logger
 
 
 This program is a high performing Go logging system that provides log trace level detection as a CLI tool.
-The log level defaults to `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, similar to a terraform log level.
-The application detects level traces and aggregates levels defaults based on telemetry of log throughput.
+The log level defaults to `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, similar to a terraform log level and detects level traces from aggregated levels defaults based on telemetry of log throughput.
 
 ```console
 $ go get github.com/Logger
