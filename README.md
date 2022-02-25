@@ -1,7 +1,7 @@
 Logger
 ==========
 
-[![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/DanielPickens/Logger
+
 
 This program is a high performing Go logging system as a CLI tool.
 The log level defaults to `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, similar to a terraform log level.
