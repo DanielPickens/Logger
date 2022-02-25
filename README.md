@@ -24,6 +24,8 @@ log.Printf("[INFO] run main function")
 $ YOUR_APP_LOG=trace go run _example/main.go
 2020/01/24 20:49:35 [INFO] run main function
 ```
+
+
 ## Logging methods
 There are many loggers and many ways to record logs. They can be written to a file, sent to stdout/stderr, sent to a logging service, and more. Each of these is possible with this package.
 
@@ -42,3 +44,9 @@ The following log levels are currently active in log tracing defaults across the
 ## License
 MIT
 
+
+## Todo
+
+ - Needs to write output to the console 
+ - Needs to write messages that in some situations are sent to console output and in other situations are sent to logs. 
+ - I need to have the logs eventually imported as a library into the system
