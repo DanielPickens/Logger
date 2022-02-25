@@ -27,7 +27,7 @@ $ YOUR_APP_LOG=trace go run _example/main.go
 ## Logging methods
 There are many loggers and many ways to record logs. They can be written to a file, sent to stdout/stderr, sent to a logging service, and more. Each of these is possible with this package.
 
-If you have logger you want to use you can write one that conforms to the Logger interface found in logging.go. That logger can then be configured as documented in the previous section.
+If you have a specific logger you want to use, you can write one that conforms to the Logger interface found in logging.go. That logger can then be configured as documented in the previous section.
 
 
 ## Log Levels
