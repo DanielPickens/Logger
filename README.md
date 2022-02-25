@@ -49,4 +49,4 @@ MIT
 
  - Needs to write output to the console.
  - Needs to write messages that in some situations are sent to console output and in other situations are sent to logs. 
- - I need to have the logs eventually imported as a library into the system.
+ - Needs to have the logs eventually imported as a library into the system.
