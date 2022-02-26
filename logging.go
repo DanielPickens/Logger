@@ -39,7 +39,7 @@ func LogOutput() (logOutput io.Writer, err error) {
 		}
 	}
 
-	// This was the default logOutput function
+	// This is the default logOutput function
 	logOutput = &logutils.LevelFilter{
 		Levels:   ValidLevels,
 		MinLevel: logutils.LogLevel(logLevel),
