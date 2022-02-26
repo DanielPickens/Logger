@@ -3,7 +3,7 @@ Logger
 
 
 
-This is a high performing Go logging system that provides log trace level detection as a CLI tool.
+This is a high performing Go logging system that provides log trace level detection as a CLI.
 The log level defaults to `TRACE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, similar to a terraform log level and detects level traces from aggregated level defaults based on telemetry of log throughput.
 
 ```console
