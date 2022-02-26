@@ -46,5 +46,5 @@ MIT
 
 ## Todo
 
- - Needs to write messages that in some situations are sent to console output and in other situations are sent to logs. 
+ - Add method to write messages that in some situations are sent to console output and in other situations are sent to logs. 
  
