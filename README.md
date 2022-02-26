@@ -13,8 +13,8 @@ $ go get github.com/Logger
 ## Example
 
 ```go
-logger.Env = "YOUR_APP_LOG"
-logger.SetOutput()
+log.Env = "YOUR_APP_LOG"
+log.SetOutput()
 
 log.Printf("[INFO] your running logs")
 ```
