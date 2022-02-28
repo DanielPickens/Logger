@@ -20,7 +20,7 @@ log.Printf("[INFO] your running logs")
 ```
 
 ```console
-$ YOUR_APP_LOG=trace go run _example/main.go
+$ YOUR_APP_LOG=trace go run main.go
 2020/01/24 20:49:35 [INFO] your running logs
 ```
 
