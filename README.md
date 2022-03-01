@@ -44,7 +44,3 @@ The following log levels are currently active in log tracing defaults across the
 MIT
 
 
-## Todo
-
- - Add method to write messages that in some situations are sent to console output and in other situations are sent to logs. 
- 
