@@ -28,4 +28,4 @@ dep:
 vet:
  go vet
 
-lint: golangci-lint run --enable-all
+lint: golangci-lint run --enable-all 
