@@ -1,4 +1,4 @@
-BINARY_NAME=Logger
+BINARY_NAME=logger
 
 build:
  GOARCH=amd64 GOOS=darwin go build -o ${BINARY_NAME}-darwin main.go
