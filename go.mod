@@ -1,3 +1,3 @@
-module logger
+module Logger
 
 go 1.19

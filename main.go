@@ -1,14 +1,19 @@
-package main
+package Logger
 
 import (
+	"io/ioutil"
 	"log"
-
-	logger "github.com/DanielPickens/logger"
+	"os"
 )
 
 func main() {
-	clilog.Env = "STANDARD_APP_LOG"
-	clilog.SetOutput()
-
-	log.Printf("[INFO] any function")
+	CLI_LOG := "CLI_LOG"
+	CLI_LOG_PATH := "CLI_LOG_PATH"
+	log.SetOutput(os.Stdout)
+	log.Println("This is a standard message")
+	log.SetOutput(ioutil.Discard)
+	x:= os.Getenv(CLI_LOG)
+	y:= os.Getenv(CLI_LOG_PATH)
+	log.Println(x)
+	log.Println(y)
 }
