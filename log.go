@@ -1,4 +1,4 @@
-package logger
+package Logger
 
 import (
 	"io"
@@ -7,8 +7,6 @@ import (
 	"os"
 	"strings"
 	"syscall"
-
-	"github.com/hashicorp/logutils"
 )
 
 // These are the environmental variables that determine if we log, and if
@@ -19,7 +17,7 @@ var (
 )
 
 // ValidLevels is a list of valid log levels.
-var ValidLevels = []logutils.LogLevel{"TRACE", "DEBUG", "INFO", "WARN", "ERROR"}
+var ValidLevels = []string{"DEBUG", "INFO", "WARN", "ERROR"}
 
 // LogOutput determines where it should send logs (if anywhere) and the log level.
 func LogOutput() (logOutput io.Writer, err error) {
@@ -40,10 +38,11 @@ func LogOutput() (logOutput io.Writer, err error) {
 	}
 
 	// This is the default logOutput function
-	logOutput = &logutils.LevelFilter{
-		Levels:   ValidLevels,
-		MinLevel: logutils.LogLevel(logLevel),
-		Writer:   logOutput,
+	logOutput = io.MultiWriter(logOutput)
+	for _, level := range ValidLevels {
+		if level == logLevel {
+			break
+		}
 	}
 
 	return
